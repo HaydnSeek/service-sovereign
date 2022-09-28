@@ -41,63 +41,21 @@ const solutions = [
     href: '/move-outs',
     icon: TruckIcon,
   },
-  // {
-  //   name: 'Schools',
-  //   description: 'Get detailed reports that will help you make more informed decisions ',
-  //   href: '/schools',
-  //   icon: AcademicCapIcon,
-  // },
 ]
-const resources = [
-  {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-  },
-  { name: 'Guides', description: 'Learn how to maximize our platform to get the most out of it.', href: '#' },
-  { name: 'Events', description: 'See what meet-ups and other events we might be planning near you.', href: '#' },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#' },
-]
+
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Header() {
-  const [isDismissed, setIsDismissed] = useState(false)
   return (
     <>
-      {/* {!isDismissed && <div className="relative bg-[#08a037]">
-        <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
-          <div className="pr-16 sm:px-16 sm:text-center">
-            <p className="font-medium text-white">
-              <span className="md:hidden">Welcome to our new site!</span>
-              <span className="hidden md:inline">Welcome to our new site! Read about the brand launch and more.</span>
-              <span className="block sm:ml-2 sm:inline-block">
-                <a href="/service-sovereign-announces-new-site" className="font-bold text-white underline">
-                  Learn more
-                  <span aria-hidden="true"> &rarr;</span>
-                </a>
-              </span>
-            </p>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-start pt-1 pr-1 sm:items-start sm:pt-1 sm:pr-2">
-            <button
-              type="button"
-              className="flex rounded-md p-2 hover:bg-[#08a037] focus:outline-none focus:ring-2 focus:ring-white"
-              onClick={() => setIsDismissed(true)}
-            >
-              <span className="sr-only">Dismiss</span>
-              <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-      </div>} */}
       <Popover className="relative bg-white">
         <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
             <Link href="/">
-              <div className="flex cursor-pointer w-auto">
+              <div className="flex cursor-pointer w-auto h-20 md:h-10">
                 <span className="sr-only">Service Sovereign</span>
                 <Image
                   src={logo}
